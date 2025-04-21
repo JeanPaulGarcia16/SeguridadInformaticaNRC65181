@@ -3,10 +3,42 @@
       <input type="text" placeholder="Filter by city" #filter/>
       <button type="button" class="primary" (click)="filterResults(filter.value)">Search</button>
     </form>
+    <div class="home-container">      
+      <button type="button" class="primary" (click)="showRegisterModal = true">Registrarse</button>
+      <button type="button" class="primary" (click)="showLoginModal = true">Iniciar Sesión</button>
+      <button type="button" class="primary" (click)="showUpdateLocationModal = true">Actualizar Locación</button>
+      <button type="button" class="primary" (click)="showDeleteLocationModal = true">Eliminar Locación</button>
+    </div>
     <section class="results">
       <app-housing-location
         *ngFor="let housingLocation of filteredLocationList"
         [housingLocation]="housingLocation">
       </app-housing-location>
     </section>
-  </section>
+
+    
+    <div class="modal" *ngIf="showRegisterModal">
+      <div class="modal-content">
+        <span class="close" (click)="showRegisterModal = false">&times;</span>
+        <app-register></app-register>
+      </div>
+    </div>
+    <div class="modal" *ngIf="showLoginModal">
+      <div class="modal-content">
+        <span class="close" (click)="showLoginModal = false">&times;</span>
+        <app-login></app-login>
+      </div>
+    </div>
+    <div class="modal" *ngIf="showUpdateLocationModal">
+      <div class="modal-content">
+        <span class="close" (click)="showUpdateLocationModal = false">&times;</span>
+        <app-updatelocation></app-updatelocation>
+      </div>
+    </div>
+    <div class="modal" *ngIf="showDeleteLocationModal">
+      <div class="modal-content">
+        <span class="close" (click)="showDeleteLocationModal = false">&times;</span>
+        <app-delete-location></app-delete-location>
+      </div>
+    </div>
+</section>
