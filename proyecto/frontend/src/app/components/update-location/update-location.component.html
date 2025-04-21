@@ -1,0 +1,38 @@
+<div class="update-location-container">
+    <h2>Actualizar Locación</h2>
+    <form (ngSubmit)="onSubmit(updatelocationForm)" #updatelocationForm="ngForm" novalidate>
+      <div>
+        <label for="id">id</label>
+        <input type="text" id="id" name="id" ngModel required />
+      </div>
+      <div>
+        <label for="name">Nombre</label>
+        <input type="text" id="name" name="name" ngModel required />
+      </div>
+      <div>
+        <label for="city">Ciudad</label>
+        <input type="text" id="city" name="city" ngModel required />
+      </div>
+      <div>
+        <label for="state">Estado</label>
+        <input type="text" id="state" name="state" ngModel required />
+      </div>
+      <div>
+        <label for="photo">Foto</label>
+        <input type="text" id="photo" name="photo" ngModel required />
+      </div>
+      <div>
+        <label for="availableUnits">Unidades Disponibles</label>
+        <input type="text" id="availableUnits" name="availableUnits" ngModel required />
+      </div>
+      <div>
+        <label for="wifi">WiFi</label>
+        <input type="text" id="wifi" name="wifi" ngModel required />
+      </div>
+      <div>
+        <label for="laundry">Zona de lavado</label>
+        <input type="text" id="laundry" name="laundry" ngModel required />
+      </div>
+      <button type="submit" class="btn btn-success">Actualizar</button>
+    </form>
+  </div>
