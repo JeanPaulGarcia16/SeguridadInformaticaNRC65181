@@ -1,0 +1,10 @@
+<div class="register-container">
+    <h2>Eliminar locación</h2>
+    <form (ngSubmit)="onSubmit(deletelocationrForm)" #deletelocationrForm="ngForm" novalidate>
+      <div>
+        <label for="id">ID a eliminar</label>
+        <input type="text" id="id" name="id" ngModel required />
+      </div>      
+      <button type="submit" class="btn btn-success">Eliminar</button>
+    </form>
+  </div>
